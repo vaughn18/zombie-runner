@@ -34,6 +34,8 @@ public class EnemyAI : MonoBehaviour
 
     }
 
+
+    //conditions on when to fight player
     private void EngageTarget()
     {
         FaceTarget();
@@ -48,11 +50,14 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+
+    //attack the player
     private void AttackTarget()
     {
         GetComponent<Animator>().SetBool("attack", true);
     }
 
+    //chase the player
     private void ChaseTarget()
     {
         GetComponent<Animator>().SetBool("attack", false);
@@ -60,17 +65,24 @@ public class EnemyAI : MonoBehaviour
         navMeshAgent.SetDestination(target.position);
     }
 
+    //drawe red sphere around the enemy to see the range of when it gets provoked during edit
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 
+    //face the player when attacking
     private void FaceTarget()
     {
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
 
+    }
+
+    public void OnDamageTaken()
+    {
+        isProvoked = true;
     }
 }

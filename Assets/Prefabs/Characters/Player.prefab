@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 13600000}
   - component: {fileID: 11400004}
   - component: {fileID: 7613462726505346511}
+  - component: {fileID: 3523141745882386229}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -257,8 +258,8 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: -90
-        value: 1
+        time: -10.263443
+        value: 1.0052681
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -266,8 +267,8 @@ MonoBehaviour:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 59.25
-        value: 1.0023575
+        time: 57.353485
+        value: 1.0047188
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -275,8 +276,8 @@ MonoBehaviour:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 90
-        value: 0
+        time: 80.769135
+        value: 0.50335693
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -299,7 +300,7 @@ MonoBehaviour:
   advancedSettings:
     groundCheckDistance: 0.1
     stickToGroundHelperDistance: 0.6
-    slowDownRate: 20
+    slowDownRate: 80
     airControl: 0
     shellOffset: 0
 --- !u!114 &7613462726505346511
@@ -315,6 +316,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
+--- !u!114 &3523141745882386229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff61b4f9d70cf5409c4d617e2613208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 0}
 --- !u!114 &645821887
 MonoBehaviour:
   m_ObjectHideFlags: 0
